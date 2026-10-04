@@ -81,13 +81,31 @@
 
       <div class="project-grid">
         <article class="project-card project-card-large">
-          <div class="placeholder-photo project-photo">
-            <span>Featured project</span>
-            <small>Large finished project photo</small>
+          <div class="before-after" style="--split: 50%;">
+            <img class="before-after__image before-after__after" src="assets/kitchen-after.jpg" alt="Kitchen after renovation" />
+            <div class="before-after__before" aria-hidden="true">
+              <img class="before-after__image" src="assets/kitchen-before.jpg" alt="" />
+            </div>
+
+            <span class="before-after__label before-after__label--before">Before</span>
+            <span class="before-after__label before-after__label--after">After</span>
+
+            <div class="before-after__divider" aria-hidden="true">
+              <span class="before-after__handle">↔</span>
+            </div>
+
+            <input
+              class="before-after__range"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Drag to compare the kitchen before and after"
+            />
           </div>
           <div class="project-meta">
-            <strong>Project title</strong>
-            <span>Type of carpentry • Town, NY</span>
+            <strong>Kitchen Remodel</strong>
+            <span>Drag to compare before &amp; after</span>
           </div>
         </article>
 
