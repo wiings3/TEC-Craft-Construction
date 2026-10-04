@@ -14,3 +14,17 @@ document.querySelectorAll('.site-nav a').forEach(link => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+document.querySelectorAll('.before-after').forEach(compare => {
+  const range = compare.querySelector('.before-after__range');
+  if (!range) return;
+
+  const updateSplit = () => {
+    compare.style.setProperty('--split', `${range.value}%`);
+  };
+
+  range.addEventListener('input', updateSplit);
+  range.addEventListener('change', updateSplit);
+  updateSplit();
+});
