@@ -842,3 +842,43 @@ footer p {
     padding: 50px 0;
   }
 }
+
+
+.form-success {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.form-success .eyebrow {
+  margin-bottom: 0;
+}
+
+.form-success h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: 30px;
+}
+
+.form-success p:not(.eyebrow) {
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  line-height: 1.7;
+}
+
+.form-success .button {
+  margin-top: 8px;
+  width: fit-content;
+}
+
+.form-error {
+  margin: -4px 0 0;
+  color: #f4c7c7;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-submit:disabled {
+  opacity: .6;
+  cursor: wait;
+}
