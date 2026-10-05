@@ -200,29 +200,89 @@
     </section>
 
     <section class="contact section" id="contact">
-      <div>
-        <p class="eyebrow">Have a project in mind?</p>
-        <h2>Start with a conversation.</h2>
+      <div class="contact-intro">
+        <p class="eyebrow">Request a service</p>
+        <h2>Tell us about your project.</h2>
         <p>
-          Tell Tim what you're looking to have done. Photos, measurements, and a short description are all helpful.
+          Share a few details about the work you're considering and Tim can follow up to discuss the project, timing, and next steps.
         </p>
+
+        <div class="contact-details">
+          <div>
+            <span>Phone</span>
+            <a href="tel:+18455323608">(845) 532-3608</a>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:tim@teccraftconstruction.com">tim@teccraftconstruction.com</a>
+          </div>
+          <div>
+            <span>Service area</span>
+            <strong>Dutchess &amp; Ulster Counties</strong>
+          </div>
+        </div>
       </div>
 
-      <div class="contact-card">
-        <div>
-          <span>Phone</span>
-          <a href="tel:+18455323608">(845) 532-3608</a>
+      <form
+        class="service-request-form"
+        name="service-request"
+        method="POST"
+        action="/thank-you.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="service-request" />
+        <p class="form-honeypot">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Phone Number</span>
+            <input type="tel" name="phone" autocomplete="tel" required />
+          </label>
         </div>
-        <div>
+
+        <label>
           <span>Email</span>
-          <a href="#">tim@teccraftconstruction.com</a>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <div class="form-row">
+          <label>
+            <span>Required Service</span>
+            <select name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Interior Carpentry</option>
+              <option>Kitchen &amp; Home Updates</option>
+              <option>Decks &amp; Exterior Carpentry</option>
+              <option>Repairs &amp; Improvements</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </label>
+          <label>
+            <span>Project Location</span>
+            <input type="text" name="project-location" placeholder="Town or city" />
+          </label>
         </div>
-        <div>
-          <span>Service area</span>
-          <strong>Dutchess &amp; Ulster Counties</strong>
-        </div>
-        <a class="button button-light" href="mailto:tim@teccraftconstruction.com">Send an email</a>
-      </div>
+
+        <label>
+          <span>Project Details</span>
+          <textarea
+            name="project-details"
+            rows="6"
+            placeholder="Tell us what you'd like to have done, the current condition of the space, and any timing you have in mind."
+            required
+          ></textarea>
+        </label>
+
+        <button class="button button-light form-submit" type="submit">Request a Service</button>
+        <p class="form-note">Submitting this form sends your project details directly to TEC Craft Construction.</p>
+      </form>
     </section>
   </main>
 
