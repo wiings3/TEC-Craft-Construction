@@ -120,13 +120,31 @@
         </article>
 
         <article class="project-card">
-          <div class="placeholder-photo project-photo">
-            <span>Project photo</span>
-            <small>Finished work</small>
+          <div class="before-after before-after--small" style="--split: 50%;">
+            <img class="before-after__image before-after__after" src="assets/porch-after.jpg" alt="Front porch after renovation" />
+            <div class="before-after__before" aria-hidden="true">
+              <img class="before-after__image" src="assets/porch-before.jpg" alt="" />
+            </div>
+
+            <span class="before-after__label before-after__label--before">Before</span>
+            <span class="before-after__label before-after__label--after">After</span>
+
+            <div class="before-after__divider" aria-hidden="true">
+              <span class="before-after__handle">↔</span>
+            </div>
+
+            <input
+              class="before-after__range"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Drag to compare the front porch before and after"
+            />
           </div>
           <div class="project-meta">
-            <strong>Project title</strong>
-            <span>Type of work</span>
+            <strong>Front Porch Entry Upgrade</strong>
+            <span>Drag to compare before &amp; after</span>
           </div>
         </article>
       </div>
