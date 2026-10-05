@@ -807,3 +807,38 @@ footer p {
     min-height: 310px;
   }
 }
+
+
+.thank-you-page {
+  width: min(calc(100% - 48px), 860px);
+  margin: 0 auto;
+  padding: 110px 0 140px;
+}
+
+.thank-you-card {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 70px 0;
+}
+
+.thank-you-card h1 {
+  max-width: 760px;
+}
+
+.thank-you-card > p:not(.eyebrow) {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 32px;
+}
+
+@media (max-width: 850px) {
+  .thank-you-page {
+    width: min(calc(100% - 32px), 860px);
+    padding: 70px 0 100px;
+  }
+
+  .thank-you-card {
+    padding: 50px 0;
+  }
+}
