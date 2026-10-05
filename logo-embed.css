@@ -1,0 +1,23 @@
+.brand-logo-exact {
+  display: block;
+  width: 132px;
+  aspect-ratio: 400 / 324;
+  background-image: url("data:image/webp;base64,__TEC_LOGO_CONTINUE__");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer-brand .brand-logo-exact {
+  width: 150px;
+}
+
+@media (max-width: 520px) {
+  .brand-logo-exact {
+    width: 106px;
+  }
+
+  .footer-brand .brand-logo-exact {
+    width: 125px;
+  }
+}
