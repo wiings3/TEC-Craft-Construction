@@ -81,3 +81,30 @@ serviceRequestForm?.addEventListener('submit', async (event) => {
     errorMessage.textContent = 'Something went wrong while sending your request. Please try again or call (845) 532-3608.';
   }
 });
+
+
+document.querySelectorAll('.photo-upload-card').forEach(card => {
+  const input = card.querySelector('input[type="file"]');
+  const preview = card.querySelector('.photo-upload-preview');
+
+  if (!input || !preview) return;
+
+  input.addEventListener('change', () => {
+    const file = input.files?.[0];
+
+    if (!file) {
+      card.classList.remove('has-photo');
+      preview.removeAttribute('src');
+      return;
+    }
+
+    if (preview.dataset.objectUrl) {
+      URL.revokeObjectURL(preview.dataset.objectUrl);
+    }
+
+    const objectUrl = URL.createObjectURL(file);
+    preview.src = objectUrl;
+    preview.dataset.objectUrl = objectUrl;
+    card.classList.add('has-photo');
+  });
+});
