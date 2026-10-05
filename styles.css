@@ -882,3 +882,92 @@ footer p {
   opacity: .6;
   cursor: wait;
 }
+
+
+.photo-upload-group {
+  display: grid;
+  gap: 12px;
+}
+
+.photo-upload-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.photo-upload-heading > span {
+  color: rgba(255,255,255,.62);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.photo-upload-heading em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255,255,255,.42);
+}
+
+.photo-upload-heading small {
+  max-width: 300px;
+  color: rgba(255,255,255,.46);
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.photo-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.photo-upload {
+  border: 1px dashed rgba(255,255,255,.3);
+  background: rgba(255,255,255,.04);
+  padding: 14px;
+  min-width: 0;
+}
+
+.photo-upload > span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.photo-upload input[type="file"] {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+}
+
+.photo-upload input[type="file"]::file-selector-button {
+  margin-right: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .photo-upload-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-upload-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .photo-upload-heading small {
+    max-width: none;
+    text-align: left;
+  }
+}
