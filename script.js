@@ -45,18 +45,10 @@ serviceRequestForm?.addEventListener('submit', async (event) => {
 
   try {
     const formData = new FormData(serviceRequestForm);
-    const body = new URLSearchParams();
-
-    formData.forEach((value, key) => {
-      body.append(key, String(value));
-    });
 
     const response = await fetch('/', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: body.toString()
+      body: formData
     });
 
     if (!response.ok) {
