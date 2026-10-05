@@ -228,6 +228,7 @@
         name="service-request"
         method="POST"
         action="/"
+        enctype="multipart/form-data"
         data-netlify="true"
         netlify-honeypot="bot-field"
       >
@@ -268,6 +269,28 @@
             <span>Project Location</span>
             <input type="text" name="project-location" placeholder="Town or city" />
           </label>
+        </div>
+
+        <div class="photo-upload-group">
+          <div class="photo-upload-heading">
+            <span>Project Photos <em>(optional)</em></span>
+            <small>Add up to 3 photos. 8 MB maximum total upload size.</small>
+          </div>
+
+          <div class="photo-upload-grid">
+            <label class="photo-upload">
+              <span>Photo 1</span>
+              <input type="file" name="photo-1" accept="image/*" />
+            </label>
+            <label class="photo-upload">
+              <span>Photo 2</span>
+              <input type="file" name="photo-2" accept="image/*" />
+            </label>
+            <label class="photo-upload">
+              <span>Photo 3</span>
+              <input type="file" name="photo-3" accept="image/*" />
+            </label>
+          </div>
         </div>
 
         <label>
