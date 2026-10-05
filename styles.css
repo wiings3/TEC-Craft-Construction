@@ -696,3 +696,20 @@ footer p {
     height: 40px;
   }
 }
+
+
+.before-after--small {
+  min-height: 260px;
+}
+
+@media (max-width: 850px) {
+  .before-after--small {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 520px) {
+  .before-after--small {
+    min-height: 310px;
+  }
+}
